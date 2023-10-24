@@ -1,0 +1,1665 @@
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 15)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',15,0)">line 15</a>)
+Phibottom = int(int(Ebottom,x,-1,1), y,-1,1);
+} 
+diary ('Lab202');
+diary on
+eps0 = 8.8510^-12; k = 1/(4*pi*eps0);
+q1 = 45*10^-9;
+syms x y z;
+E = @(x,y,z) k*q1/((x-0.1)^2 + (y-0.2) ^2 + (z-0.3) ^2)^(3/2)*[x-0.1,y-0.2,z-0.3];
+I = [1, 0, 0]; J = [0, 1, 0]; K = [0, 0, 1];
+
+Etop = dot(K, E(x, y, 1));
+Ebottom = dot(-K, E(x, y, -1));
+Eleft = dot(-J, E(x, -1,z));
+Eback = dot(-I,E(-1,y,z));
+
+Phitop = int(int(Etop,x,-1,1), y,-1,1);
+Phibottom = int(int(Ebottom,x,-1,1), y,-1,1);
+Phileft = int(int(Eleft,x,-1,1), y,-1,1);
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+} 
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+q1 = 9*10^9
+
+q1 =
+
+   9.0000e+09
+
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+q1 = 9*10^9
+
+q1 =
+
+   9.0000e+09
+
+untitled2
+{Unrecognized function or variable 'Eright'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 17)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',17,0)">line 17</a>)
+Phiright = int(int(Eright,x,-1,1), y,-1,1);
+} 
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+
+untitled2
+{Unrecognized function or variable 'Eright'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 17)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',17,0)">line 17</a>)
+Phiright = int(int(Eright,x,-1,1), y,-1,1);
+} 
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+q1 = 9*10^-9
+
+q1 =
+
+   9.0000e-09
+
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 14)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',14,0)">line 14</a>)
+Phitop = int(int(Etop,x,-1,1), y,-1,1);
+} 
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+vpa(Phitop, 10)
+ 
+ans =
+ 
+2392.855572
+ 
+clear
+untitled2
+{Unrecognized function or variable 'Eright'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 17)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',17,0)">line 17</a>)
+Phiright = int(int(Eright,x,-1,1), y,-1,1);
+} 
+vpa(Phitop, 10)
+ 
+ans =
+ 
+478.5711144
+ 
+
+
+
+
+
+clear
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 20)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',20,0)">line 20</a>)
+Phileft = int(int(Eleft,x,-1,1), y,-1,1);
+} 
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+clear all
+clear
+
+
+
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+piecewise((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0) + 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)) + (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, -(- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, -(- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0), z^2 < -1.0 & z^2 < -2.0 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real') | (- 1.0*z^2 - 1.0)^(1/2) <= 1.0 & z^2 < -1.0) | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)), (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2) & (~z^2 < -2.0 | -1.0 <= z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 1.0 | ~z^2 < -1.0) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2)), 1655.544026*vpaintegral(1/(x^2 + z^2 + 1)^(3/2), x, -1, 1))
+ 
+ 
+ans =
+ 
+piecewise((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0) + 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)) + (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, -(- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(x/(x^2 + z^2 + 1)^(1/2), x, -(- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0), z^2 < -1.0 & z^2 < -2.0 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real') | (- 1.0*z^2 - 1.0)^(1/2) <= 1.0 & z^2 < -1.0) | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)), (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2) & (~z^2 < -2.0 | -1.0 <= z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 1.0 | ~z^2 < -1.0) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2)), 1655.544026*vpaintegral(1/(x^2 + z^2 + 1)^(3/2), x, -1, 1))
+ 
+ 
+ans =
+ 
+piecewise((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, (- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, (- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0) + 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)) + (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, -(- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, -(- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0), z^2 < -1.0 & z^2 < -2.0 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real') | (- 1.0*z^2 - 1.0)^(1/2) <= 1.0 & z^2 < -1.0) | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)), (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2) & (~z^2 < -2.0 | -1.0 <= z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 1.0 | ~z^2 < -1.0) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2)), 1655.544026*vpaintegral(1/(y^2 + z^2 + 1)^(3/2), y, -1, 1))
+ 
+ 
+ans =
+ 
+piecewise((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, (- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, (- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0) + 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)) + (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, -(- z^2 - 1)^(1/2), 'Left'))/(z^2 + 1.0) - (1655.544026*limit(y/(y^2 + z^2 + 1)^(1/2), y, -(- z^2 - 1)^(1/2), 'Right'))/(z^2 + 1.0), z^2 < -1.0 & z^2 < -2.0 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real') | (- 1.0*z^2 - 1.0)^(1/2) <= 1.0 & z^2 < -1.0) | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & -1.0 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & in(z^2, 'real'), 3311.088051/((z^2 + 1.0)*(z^2 + 2.0)^(1/2)), (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2) & (~z^2 < -2.0 | -1.0 <= z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 1.0 | ~z^2 < -1.0) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~-1.0 <= z^2)), 1655.544026*vpaintegral(1/(y^2 + z^2 + 1)^(3/2), y, -1, 1))
+ 
+
+untitled2
+
+
+
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 20)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',20,0)">line 20</a>)
+Phileft = int(int(Eleft,x,-1,1), y,-1,1);
+} 
+clear all
+untitled2
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+piecewise((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & z^2 < -1.25, Inf + 827.7720129/((z^2 + 1.0)*(z^2 + 1.25)^(1/2)) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, - (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0), (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & in(z^2, 'real'), 827.7720129/((z^2 + 1.0)*(z^2 + 1.25)^(1/2)) + (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Left'))/(z^2 + 1.0) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0) + 2483.316039/((z^2 + 1.0)*(z^2 + 3.25)^(1/2)) + (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, - (- z^2 - 1)^(1/2) + 1/2, 'Left'))/(z^2 + 1.0) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, - (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0), (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & (-1.0 < z^2 | -1.0 < z^2 & in(z^2, 'real')), 827.7720129/((z^2 + 1.0)*(z^2 + 1.25)^(1/2)) + (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Left'))/(z^2 + 1.0) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0) + 2483.316039/((z^2 + 1.0)*(z^2 + 3.25)^(1/2)), (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) | ~z^2 < -1.25) & (~z^2 < -1.0 & ~z^2 < -1.25 | -3.25 <= z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~in(z^2, 'real')) & ((z^2 <= -1.0 | ~in(z^2, 'real')) & ~-1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5])) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) | ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5]) | (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 0.5 | ~z^2 < -1.0) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.0 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.0 <= z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.25 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.25 <= z^2)) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval(0.5, [1.5]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 1.5 | ~z^2 < -1.25)) & (~-1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])) & (~-1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])) & (~-1.25 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])) & (~-1.25 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])), 1655.544026*vpaintegral(1/((x - 1/2)^2 + z^2 + 1)^(3/2), x, -1, 1), ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ((- 1.0*z^2 - 1.0)^(1/2) <= 1.5 & z^2 < -1.25 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval(0.5, [1.5]) & in(z^2, 'real') | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.25 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.25 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & in(z^2, 'real') | (- 1.0*z^2 - 1.0)^(1/2) <= 0.5 & z^2 < -1.0)) | (z^2 < -1.0 | z^2 < -1.25) & z^2 < -3.25 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.0 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.25 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.25 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & in(z^2, 'real'), (827.7720129*(3.0/(z^2 + 3.25)^(1/2) + 1/(z^2 + 1.25)^(1/2)))/(z^2 + 1.0))
+ 
+ 
+ans =
+ 
+piecewise((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & z^2 < -1.25, Inf + 827.7720129/((z^2 + 1.0)*(z^2 + 1.25)^(1/2)) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, - (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0), (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & in(z^2, 'real'), 827.7720129/((z^2 + 1.0)*(z^2 + 1.25)^(1/2)) + (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Left'))/(z^2 + 1.0) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0) + 2483.316039/((z^2 + 1.0)*(z^2 + 3.25)^(1/2)) + (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, - (- z^2 - 1)^(1/2) + 1/2, 'Left'))/(z^2 + 1.0) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, - (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0), (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & (-1.0 < z^2 | -1.0 < z^2 & in(z^2, 'real')), 827.7720129/((z^2 + 1.0)*(z^2 + 1.25)^(1/2)) + (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Left'))/(z^2 + 1.0) - (1655.544026*limit((x - 1/2)/((x - 1/2)^2 + z^2 + 1)^(1/2), x, (- z^2 - 1)^(1/2) + 1/2, 'Right'))/(z^2 + 1.0) + 2483.316039/((z^2 + 1.0)*(z^2 + 3.25)^(1/2)), (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) | ~z^2 < -1.25) & (~z^2 < -1.0 & ~z^2 < -1.25 | -3.25 <= z^2) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~in(z^2, 'real')) & ((z^2 <= -1.0 | ~in(z^2, 'real')) & ~-1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5])) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) | ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5]) | (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 0.5 | ~z^2 < -1.0) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.0 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.0 <= z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.25 < z^2) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) | ~-1.25 <= z^2)) & (~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval(0.5, [1.5]) | ~in(z^2, 'real')) & (~(- 1.0*z^2 - 1.0)^(1/2) <= 1.5 | ~z^2 < -1.25)) & (~-1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])) & (~-1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])) & (~-1.25 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])) & (~-1.25 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [1.5])), 1655.544026*vpaintegral(1/((x - 1/2)^2 + z^2 + 1)^(3/2), x, -1, 1), ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ((- 1.0*z^2 - 1.0)^(1/2) <= 1.5 & z^2 < -1.25 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval(0.5, [1.5]) & in(z^2, 'real') | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & ((- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.0 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.0 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.25 < z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & -1.25 <= z^2 | (- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [0.5]) & in(z^2, 'real') | (- 1.0*z^2 - 1.0)^(1/2) <= 0.5 & z^2 < -1.0)) | (z^2 < -1.0 | z^2 < -1.25) & z^2 < -3.25 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.0 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.0 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.25 < z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & -1.25 <= z^2 | ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-0.5], [1.5]) & ~(- 1.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.5], [0.5]) & in(z^2, 'real'), (827.7720129*(3.0/(z^2 + 3.25)^(1/2) + 1/(z^2 + 1.25)^(1/2)))/(z^2 + 1.0))
+ 
+ 
+ans =
+ 
+piecewise(in(z^2, 'real') & 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]), 1655.544026/((z^2 + 0.25)*(z^2 + 1.25)^(1/2)) + (827.7720129*limit(y/(y^2 + z^2 + 1/4)^(1/2), y, -(- 4*z^2 - 1)^(1/2)/2, 'Left'))/(z^2 + 0.25) + (827.7720129*limit(y/(y^2 + z^2 + 1/4)^(1/2), y, (- 4*z^2 - 1)^(1/2)/2, 'Left'))/(z^2 + 0.25) - (827.7720129*limit(y/(y^2 + z^2 + 1/4)^(1/2), y, -(- 4*z^2 - 1)^(1/2)/2, 'Right'))/(z^2 + 0.25) - (827.7720129*limit(y/(y^2 + z^2 + 1/4)^(1/2), y, (- 4*z^2 - 1)^(1/2)/2, 'Right'))/(z^2 + 0.25), -0.25 < z^2 & ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | -0.25 <= z^2 & ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | z^2 < -0.25 & z^2 < -1.25 | in(z^2, 'real') & ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) & (in(z^2, 'real') & 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | -0.25 < z^2 & 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | -0.25 <= z^2 & 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | (- 4.0*z^2 - 1.0)^(1/2) <= 2.0 & z^2 < -0.25), 1655.544026/((z^2 + 0.25)*(z^2 + 1.25)^(1/2)), (~-0.25 < z^2 | 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0])) & (~-0.25 <= z^2 | 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0])) & (0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]) | (~-0.25 < z^2 | ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0])) & (~-0.25 <= z^2 | ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0])) & (~(- 4.0*z^2 - 1.0)^(1/2) <= 2.0 | ~z^2 < -0.25) & (~in(z^2, 'real') | ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0]))) & (~in(z^2, 'real') | 0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0])) & (-0.25 <= z^2 | ~z^2 < -1.25) & (~in(z^2, 'real') | ~0.5*(- 4.0*z^2 - 1.0)^(1/2) in Dom::Interval([-1.0], [1.0])), 827.7720129*vpaintegral(1/(y^2 + z^2 + 1/4)^(3/2), y, -1, 1))
+ 
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/vpa')" style="font-weight:bold">sym/vpa</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 30)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',30,0)">line 30</a>)
+vpa(Phiback, 10)
+} 
+clear all
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 18)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',18,0)">line 18</a>)
+Phitop = int(int(Etop,x,-1,1), y,-1,1);
+} 
+opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',18,0)
+clear
+untitled2
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+3070.356117
+ 
+ 
+ans =
+ 
+1035.598156
+ 
+clear all
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+clear
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+clear all
+clear
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+
+clear all
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+clear
+clear all
+untitled2
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+1733.68165
+ 
+ 
+ans =
+ 
+8668.4
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+clear all
+
+untitled2
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+3070.356117
+ 
+ 
+ans =
+ 
+1035.598156
+ 
+ 
+ans =
+ 
+8828.1
+ 
+ 
+ans =
+ 
+3.8191e-8
+ 
+untitled2
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1035.598156
+ 
+ 
+ans =
+ 
+3070.356117
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+1574.033906
+ 
+ 
+ans =
+ 
+7331.7
+ 
+ 
+ans =
+ 
+3.1717e-8
+ 
+clear
+untitled2
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+506.2207102
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+3583.9
+ 
+ 
+ans =
+ 
+3.1717e-8
+ 
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 22)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',22,0)">line 22</a>)
+Phiright = int(int(Eright,x,-1,1), z,-1,1);
+} 
+clear all
+untitled2
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+506.2207102
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+3583.9
+ 
+ 
+ans =
+ 
+3.1717e-8
+ 
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+4237.3
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+4237.3
+ 
+ 
+ans =
+ 
+3.75e-8
+ 
+clear
+untitled2
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+506.2207102
+ 
+ 
+ans =
+ 
+4315.3
+ 
+ 
+ans =
+ 
+3.8191e-8
+ 
+clear
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+{Unrecognized function or variable 'Ph'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 26)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',26,0)">line 26</a>)
+ vpa(Ph, 10)
+} 
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+{Unrecognized function or variable 'Phi'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 28)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',28,0)">line 28</a>)
+ vpa(Phi, 10)
+} 
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+{Unrecognized function or variable 'Ph'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 31)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',31,0)">line 31</a>)
+ ALL_Phi = Phitop + Ph + Phileft + Phi + Phifront + Phiback;
+} 
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+5084.7
+ 
+{Unrecognized function or variable 'ALL'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 33)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',33,0)">line 33</a>)
+ vpa(eps0*ALL, 5)
+} 
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+5084.7
+ 
+ 
+ans =
+ 
+4.5e-8
+ 
+clear
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 21)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',21,0)">line 21</a>)
+ Phitop = int(int(Etop, x,-1,1), y,-1,1);
+} 
+untitled2
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+506.2207102
+ 
+ 
+ans =
+ 
+5084.7
+ 
+ 
+ans =
+ 
+4.5e-8
+ 
+untitled2
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+506.2207102
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+769.4186759
+ 
+ 
+ans =
+ 
+5084.7
+ 
+ 
+ans =
+ 
+4.5e-8
+ 
+clear
+
+
+
+
+
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+1218.26532
+ 
+ 
+ans =
+ 
+434.0847369
+ 
+ 
+ans =
+ 
+391.9627705
+ 
+ 
+ans =
+ 
+1764.292713
+ 
+ 
+ans =
+ 
+700.9818438
+ 
+ 
+ans =
+ 
+575.1583785
+ 
+ 
+ans =
+ 
+5084.7
+ 
+ 
+ans =
+ 
+4.5e-8
+ 
+untitled2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('untitled2', 'C:\Users\18606\Documents\MATLAB\untitled2.m', 23)" style="font-weight:bold">untitled2</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\untitled2.m',23,0)">line 23</a>)
+ Phibottom = int(int(Ebottom, x, -a, a), y, -a,a);
+} 
+
+
+
+
+untitled2
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+1500.850349
+ 
+ 
+ans =
+ 
+9005.1
+ 
+ 
+ans =
+ 
+7.9695e-8
+ 
+untitled2
+ 
+ans =
+ 
+2314.426521
+ 
+ 
+ans =
+ 
+2314.426521
+ 
+ 
+ans =
+ 
+2314.426521
+ 
+ 
+ans =
+ 
+2314.426521
+ 
+ 
+ans =
+ 
+2314.426521
+ 
+ 
+ans =
+ 
+2314.426521
+ 
+ 
+ans =
+ 
+13887.0
+ 
+ 
+ans =
+ 
+1.229e-7
+ 
+untitled2
+ 
+ans =
+ 
+2519.484437
+ 
+ 
+ans =
+ 
+2519.484437
+ 
+ 
+ans =
+ 
+2519.484437
+ 
+ 
+ans =
+ 
+2519.484437
+ 
+ 
+ans =
+ 
+2519.484437
+ 
+ 
+ans =
+ 
+2519.484437
+ 
+ 
+ans =
+ 
+15117.0
+ 
+ 
+ans =
+ 
+1.3378e-7
+ 
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+162.1234598
+ 
+ 
+ans =
+ 
+-847.4576271
+ 
+ 
+ans =
+ 
+171.3335418
+ 
+ 
+ans =
+ 
+171.3335418
+ 
+ 
+ans =
+ 
+171.3335418
+ 
+ 
+ans =
+ 
+171.3335418
+ 
+ 
+ans =
+ 
+0.0
+ 
+ 
+ans =
+ 
+0.0
+ 
+Lab203
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('contour')" style="font-weight:bold">contour</a>
+Input arguments must be real. Use the function REAL to get the real
+part of the inputs.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Lab203', 'C:\Users\18606\Documents\MATLAB\Lab203.m', 13)" style="font-weight:bold">Lab203</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\Lab203.m',13,0)">line 13</a>)
+contour (x,y,V)
+} 
+Lab203
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('contour')" style="font-weight:bold">contour</a>
+Input arguments must be real. Use the function REAL to get the real
+part of the inputs.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Lab203', 'C:\Users\18606\Documents\MATLAB\Lab203.m', 13)" style="font-weight:bold">Lab203</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\Lab203.m',13,0)">line 13</a>)
+contour (x,y,V)
+} 
+Lab203
+Lab203B
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Lab203B', 'C:\Users\18606\Documents\MATLAB\Lab203B.m', 10)" style="font-weight:bold">Lab203B</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\Lab203B.m',10,0)">line 10</a>)
+V2 = k*int(lambda./r2, X, -L/2, L/2);
+} 
+clear
+Lab203B
+Lab203
+Lab203B
+CLEAR
+{Unrecognized function or variable 'CLEAR'.
+} 
+clear
+Lab203B
+Lab203C
+if system_dependent('IsDebugMode')==1, dbcont; end
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/int')" style="font-weight:bold">sym/int</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Lab203C', 'C:\Users\18606\Documents\MATLAB\Lab203C.m', 10)" style="font-weight:bold">Lab203C</a> (<a href="matlab: opentoline('C:\Users\18606\Documents\MATLAB\Lab203C.m',10,0)">line 10</a>)
+Va = double(int(-lambda*k./ra, X, -L/2, L/2));
+} 
+sym
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym')" style="font-weight:bold">sym</a>
+Not enough input arguments.
+} 
+sym(x)
+ 
+ans =
+ 
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+[-2, -9/5, -8/5, -7/5, -6/5, -1, -4/5, -3/5, -2/5, -1/5, 0, 1/5, 2/5, 3/5, 4/5, 1, 6/5, 7/5, 8/5, 9/5, 2]
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lab203C
+untitled2
+ 
+ans =
+ 
+325.9027975
+ 
+ 
+ans =
+ 
+0.0
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+2542.4
+ 
+ 
+ans =
+ 
+2.25e-8
+ 
+clear all
+untitled2
+ 
+ans =
+ 
+325.9027975
+ 
+ 
+ans =
+ 
+0.0
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+554.117521
+ 
+ 
+ans =
+ 
+2542.4
+ 
+ 
+ans =
+ 
+2.25e-8
+ 
+clear all
+
+
+
+
+
+
+
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+5084.7
+ 
+ 
+ans =
+ 
+4.5e-8
+ 
+
+
+
+
+
+
+
+
+
+
+
+untitled2
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+847.4576271
+ 
+ 
+ans =
+ 
+5084.7
+ 
+ 
+ans =
+ 
+4.5e-8
+ 
+untitled2
+ 
+ans =
+ 
+1694.915254
+ 
+ 
+ans =
+ 
+1694.915254
+ 
+ 
+ans =
+ 
+1694.915254
+ 
+ 
+ans =
+ 
+1694.915254
+ 
+ 
+ans =
+ 
+1694.915254
+ 
+ 
+ans =
+ 
+1694.915254
+ 
+ 
+ans =
+ 
+10169.0
+ 
+ 
+ans =
+ 
+9.0e-8
+ 
